@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.workingDaysAndHours.views.SessionAndNotAvailableTimeAllocationController">
+   <top>
+      <Label text="INSTITUTE OF ABC" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </Label>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <MenuBar prefHeight="36.0" prefWidth="796.0" BorderPane.alignment="TOP_LEFT">
+              <menus>
+                <Menu mnemonicParsing="false" text="Lecture">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Subject">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Working days and Hours">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Student">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Location">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Static">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Tags">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Genarate time table">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox prefHeight="403.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: gray;" text="   Session and not availble">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="67.0" text="Select Lecture">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="Select Group">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Select Sub Group">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Select Session ID">
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Time">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="25.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox fillWidth="false" prefHeight="446.0" prefWidth="667.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="134.0" style="-fx-background-color: gray;" text="time allocation">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboLec" onAction="#comboSelectLec" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboGroup" onAction="#comboSelectGroup" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboSubGroup" onAction="#comboSelectSub" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="comboSession" onAction="#comboSelectSession" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <TextField fx:id="itTime" prefHeight="25.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <AnchorPane prefHeight="425.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tvSessions" layoutX="-339.0" layoutY="28.0" prefHeight="418.0" prefWidth="718.0">
+                    <columns>
+                        <TableColumn fx:id="colDuration" prefWidth="139.0" text="Duration" />
+                        <TableColumn fx:id="colLecture" prefWidth="190.0" text="Lecturer" />
+                        <TableColumn fx:id="colGroup" minWidth="0.0" prefWidth="128.0" text="Group" />
+                        <TableColumn fx:id="colSub" prefWidth="128.0" text="Select Sub Group" />
+                        <TableColumn fx:id="colSession" maxWidth="211.0" prefWidth="148.0" text="Session ID" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="-461.0" prefHeight="25.0" prefWidth="840.0" style="-fx-background-color: gray;" text="Session and not available time allocation view">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="88.0" prefWidth="796.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

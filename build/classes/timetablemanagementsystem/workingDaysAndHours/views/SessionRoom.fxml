@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="506.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.workingDaysAndHours.views.SessionRoomController">
+   <top>
+      <Pane prefHeight="86.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="214.0" prefWidth="217.0" />
+         </children></Pane>
+   </top>
+   <left>
+      <BorderPane prefHeight="314.0" prefWidth="313.0" BorderPane.alignment="CENTER">
+         <left>
+            <VBox prefHeight="314.0" prefWidth="153.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="ID">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Select Room">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Select Day">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Start Time">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="End Time">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="314.0" prefWidth="163.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="tfId">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfRoom">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfDay">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfStartTime">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="tfEndTime">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+   </left>
+   <right>
+      <BorderPane prefHeight="214.0" prefWidth="133.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></BorderPane>
+   </right>
+   <bottom>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: green;" text="Add">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="100.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnClear" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: red;" text="Clear">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="searchbar">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="150.0" right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: ;" text="Search">
+               <HBox.margin>
+                  <Insets bottom="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: green;" text="Update">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color:: red;" text="Delete">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <TableView fx:id="tvRooms" prefHeight="317.0" prefWidth="345.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="ColRoom" minWidth="150.0" prefWidth="150.0" text="Room" />
+            <TableColumn fx:id="ColDay" minWidth="150.0" prefWidth="150.0" text="Day" />
+            <TableColumn fx:id="ColStartTime" minWidth="150.0" prefWidth="150.0" text="Start Time" />
+            <TableColumn fx:id="ColEndTime" minWidth="150.0" prefWidth="150.0" text="End Time" />
+            <TableColumn fx:id="ColId" minWidth="150.0" prefWidth="150.0" text="ID" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="40.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
